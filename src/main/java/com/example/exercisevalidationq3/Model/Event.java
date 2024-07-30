@@ -11,21 +11,18 @@ import java.util.Date;
 @AllArgsConstructor
 public class Event {
 
-    @NotNull(message = "id Can not be null")
-    @Size(min = 3,message = "id Length must be more than 2")
-    @NotEmpty
+     @Size(min = 3,message = "id Length must be more than 2")
+    @NotEmpty(message = " id Can not be empty")
     private String  id;
 
     @Positive(message = "capacity must be positive number")
     @NotNull(message = "Capacity Can not be null")
     @Min(value = 26,message = "Capacity must be more than 25 ")
     private int capacity;
-
-    @NotNull(message = "Description Can not be null")
+    
     @Size(min = 16,message = "description Length must be more than 15")
-    @NotEmpty
+    @NotEmpty(message = " Description Can not be empty")
     private String description;
-
 
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date startDate ;
