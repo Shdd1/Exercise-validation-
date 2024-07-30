@@ -66,7 +66,7 @@ public class TrackerSystemController {
                     return ResponseEntity.status(200).body(p);
                 }
             }
-            return null ;
+         return ResponseEntity.status(400).body("Not found") ;
         }
 
         @GetMapping("/display/{company}")
